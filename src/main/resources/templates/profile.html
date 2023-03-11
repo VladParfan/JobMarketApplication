@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Vatcher - Home</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet"
+	href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+</style>
+<body>
+	<nav>
+		<h1>VATCHER</h1>
+		<ul>
+			<li><a>Home</a></li>
+			<li><a>Opportunities</a></li>
+			<li><a>Profile</a></li>
+			<li><a th:href="@{/logout}">Logout</a></li>
+			<li><a class="fa fa-bell" aria-hidden="true"></a></li>
+		</ul>
+	</nav>
+	<h1 class="applications sectionHeader">Summary</h1>
+	<div class="mainGrid" style="padding-top: 0; column-gap: 0rem">
+		<div class="feed">
+			<div class="card opportunity" style="margin-left: 5rem">
+				<div class="list">
+					<h1>User info</h1>
+
+				</div>
+			</div>
+		</div>
+		<div class="feed">
+			<div class="card opportunity" style="margin-left: 5rem">
+				<div class="list">
+					<h1>Edit profile</h1>
+					<form action="/changeUserData" method="post">
+						  <label for="name">Change name:</label><br>
+						  <input class="inputForTXT" type="text" id="name" name="name"><br>
+						  <label for="email">Change email:</label><br>
+						  <input class="inputForTXT" type="text" id="email" name="email"><br><br>
+						  <input class="button" type="submit" value="Submit changes">
+					</form>
+					<input class="button" type="submit" value="Change password">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainGrid" style="padding-top: 0; column-gap: 0rem">
+		<div class="feed">
+			<div class="card opportunity" style="margin-left: 5rem">
+				<div class="list">
+
+					<h1>Job preferences</h1>
+					<p><label class="container">Preference <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p> <label class="container">Preference <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p> <label class="container">Preference <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p><label class="container">Preference <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					<input class="button" type="submit" value="Submit">
+					
+				</div>
+			</div>
+		</div>
+		<div class="feed">
+			<div class="card opportunity" style="margin-left: 5rem">
+				<div class="list">
+					<h1>Job qualifications</h1>
+					<p><label class="container">Qualification <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p> <label class="container">Qualification <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p> <label class="container">Qualification <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					
+					 <p><label class="container">Qualification <input type="checkbox">
+						<span class="checkmark"></span>
+					</label></p>
+					<input class="button" type="submit" value="Submit">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>VATCHER 2023</p>
+	</footer>
+</body>
+</html>

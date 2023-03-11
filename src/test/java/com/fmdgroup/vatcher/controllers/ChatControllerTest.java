@@ -66,15 +66,7 @@ private ChatController chatController;
 		} 
 		
 		
-//		List<Chat> opportunityMessages = new ArrayList<>();
-//		opportunityMessages.add(message);
-//		when(model.addAttribute("messages", opportunityMessages)).thenReturn(model);
-//		when(model.addAttribute("opportunityID", opportunityID)).thenReturn(model);
-//		String viewName = chatController.chatWithOpportunityID(opportunityID, model);
-//		assertEquals("chat", viewName);
-//		verify(model, times(1)).addAttribute("messages", opportunityMessages);
-//		verify(model, times(1)).addAttribute("opportunityID", opportunityID);
-//	}
+
 
 	@Test
 	public void testPostMessage() {

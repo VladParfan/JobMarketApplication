@@ -49,13 +49,7 @@ public class AuthProviderImpl implements AuthenticationProvider{
 		Integer hashedPassword = password.hashCode();
 		String hashedPasswordString = hashedPassword.toString();
 		
-		/*if(!password.equals(singleUserDetails.getPassword()))
-			throw new BadCredentialsException("Incorrect password");
 		
-		// the empty list is temporary (instead of the user role)
-		// UsernamePasswordAuthenticationToken return a our authentication object with password and role)
-		return new UsernamePasswordAuthenticationToken(singleUserDetails, password,Collections.emptyList());
-	}*/
 		
 		if(!hashedPasswordString.equals(singleUserDetails.getPassword()))
 			throw new BadCredentialsException("Incorrect password");
@@ -74,14 +68,6 @@ public class AuthProviderImpl implements AuthenticationProvider{
 		return true;
 	}
 	
-	/// added for indian guy 
-	/*private Set<SimpleGrantedAuthority> getAuthorities(Set<Authority> authorities){
-		Set<SimpleGrantedAuthority> list = new HashSet<>();
-		for(Authority auth:authorities) {
-			list.add(new SimpleGrantedAuthority(auth.getAuthority()));
-		}
-		
-		return list;
-	}*/
+	
 
 }

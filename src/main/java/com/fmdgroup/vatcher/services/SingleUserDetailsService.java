@@ -28,18 +28,7 @@ public class SingleUserDetailsService implements UserDetailsService{
 		this.authentication=authentication;
 	}
 
-	// load user by name
-	/*@Override
-	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-		Optional<SingleUser> singleUser = userRepository.findByName(name);
-		System.out.println("SingleUserDetailsService class is working/ loadUserByUsername ");
-		
-		if (singleUser.isEmpty()) {
-			throw new UsernameNotFoundException("User not found");
-		}
-		
-		return new SingleUserDetails(singleUser.get());
-	}*/
+	
 	
 	public List<SingleUser> getAllUsers(){
 		return userRepository.findAll();
@@ -94,18 +83,7 @@ public class SingleUserDetailsService implements UserDetailsService{
 		
 	}
 	
-		/*public SingleUser findUserFromCurrentSession(String email) {
-			Optional<SingleUser> singleUser = userRepository.findByEmail(email);
-			
-			if (singleUser.isPresent()) {
-				UserDetails userDetails =  new SingleUserDetails(singleUser.get());
-				SingleUserDetails singleUserDetails1 = (SingleUserDetails) userDetails;
-				return singleUserDetails1.getSingleUser();
-			}
-			
-			throw new UsernameNotFoundException("User not found");
-			
-		}*/
+		
 	
 	
 	       

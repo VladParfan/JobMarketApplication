@@ -27,14 +27,6 @@ public class JobOpportunityService implements IJobOpportunityService {
 		return jobRepository.findAll();
 	}
 	
-	//or written like this:
-//	public List<JobOpportunity> getAllJobOpportunities() throws Exception {
-//		List<JobOpportunity> jobOpportunities = jobRepository.findAll();
-//		if(jobOpportunities == null) {
-//			throw new Exception();
-//		}
-//		return jobOpportunities;
-//	}
 
 
 
@@ -96,28 +88,7 @@ public class JobOpportunityService implements IJobOpportunityService {
 	
 
 	
-	/*public void editJobOpportunityById(Long id) {
-		 Optional<JobOpportunity> optJobOpportunity = jobRepository.findById(id);
-		 if(optJobOpportunity.isPresent()) {
-			 JobOpportunity jobOpportunity = optJobOpportunity.get();
-			 
-			 jobOpportunity.setActive(false);
-			 jobOpportunity.setApplicants(null);
-			 jobOpportunity.setCompany(null);
-			 jobOpportunity.setDescription(null);
-			 jobOpportunity.setDuration(null);
-			 jobOpportunity.setExpirationDate(null);
-			 jobOpportunity.setJobTitle(null);
-			 jobOpportunity.setLocation(null);
-			 jobOpportunity.setSkills(null);
-			
-			 
-			 jobRepository.save(jobOpportunity);
-		 }else {
-			 System.out.println("job not found");
-		 }
-		
-	}*/
+	
 }
 
 

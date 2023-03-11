@@ -47,11 +47,7 @@ public class NotificationsController {
 	return "userNotifications";
 	}
 	
-//	@RequestMapping("/activeNotifications")
-//	public String getActiveNotifications(Model model) {
-//	model.addAttribute("actNotif", notificationsRepository.findByActiveTrue());
-//	return "activeNotifications";
-//	}
+
 	
 //	@GetMapping("/notifications")
 	public void checkIfRead(@PathVariable Long receiverId) {
@@ -61,18 +57,4 @@ public class NotificationsController {
 	      }
 	}
 	
-	
-//	@PostMapping("/newMessageNotifications")
-//	public void notifyNewMessage(Long receiverId, String message) {
-//	SingleUser receiver = userRepository.findById(receiverId).get();
-//	Notifications notificationMessage = new Notifications(message, receiver, new Date(), false);
-//	notificationsRepository.save(notificationMessage);
-//	}
-//	
-//	@PostMapping("/newJobNotifications")
-//	public void notifyNewJobOpportunity(Long receiverId, String jobOpportunity) {
-//	SingleUser receiver = userRepository.findById(receiverId).get();
-//	Notifications notificationNewJobOpportunity = new Notifications(jobOpportunity, receiver, new Date(), false);
-//	notificationsRepository.save(notificationNewJobOpportunity);
-//	}
 }

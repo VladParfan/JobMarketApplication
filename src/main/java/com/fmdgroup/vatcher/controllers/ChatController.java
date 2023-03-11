@@ -35,13 +35,6 @@ public class ChatController {
 	@Autowired
 	NotificationServiceImpl notificationService;
 	
-//	@GetMapping("/chat")		//maps to the chat page and returns all messages in the chat. adds all messages
-//								// to the model and returns the chat view
-//	public String chat(Model model) {
-//		model.addAttribute("messages", messages);
-//		model.addAttribute("user", userDetailsService.findUserFromCurrentSession());
-//		return "chat";
-//	}	
 	
 	@GetMapping("/chat")
 	public String chatWithOpportunityID(@RequestParam("id") Long opportunityID, Model model) {

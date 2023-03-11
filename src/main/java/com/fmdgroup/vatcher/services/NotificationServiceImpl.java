@@ -31,11 +31,7 @@ public class NotificationServiceImpl {
 			return notificationsRepository.findById(receiverId).get();
 		}
 		
-//		public String getActiveNotifications(Model model) throws Exception {
-//			List<Notifications> activeNotifications = notificationsRepository.findByActiveTrue();
-//			model.addAttribute("actNotif", activeNotifications);
-//			return "notifications";
-//		}
+
 		
 		public void checkIfRead() {
 //			return notification.isRead();
